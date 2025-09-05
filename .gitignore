@@ -2,7 +2,6 @@
 /build
 /playground
 /.idea
-/glance*.yml
 cache/*
 glance-ori
 glance
