@@ -8,7 +8,7 @@
             <div class="server-name color-highlight size-h3">{{ if .Name }}{{ .Name }}{{ else }}{{ .Info.Hostname }}{{ end }}</div>
             <div>
                 {{- if .IsReachable }}
-                    {{ if .Info.HostInfoIsAvailable }}<span {{ dynamicRelativeTimeAttrs .Info.BootTime }}></span>{{ else }}unknown{{ end }} uptime
+                    {{ if .Info.HostInfoIsAvailable }}<span {{ dynamicRelativeTimeAttrs .Info.BootTime }}></span>{{ else }}unknown{{ end }} 运行时间
                 {{- else }}
                     unreachable
                 {{- end }}
@@ -17,7 +17,7 @@
         <div class="shrink-0"{{ if .IsReachable }} data-popover-type="html" data-popover-margin="0.2rem" data-popover-max-width="400px"{{ end }}>
             {{- if .IsReachable }}
             <div data-popover-html>
-                <div class="size-h5 text-compact">PLATFORM</div>
+                <div class="size-h5 text-compact">系统</div>
                 <div class="color-highlight">{{ if .Info.HostInfoIsAvailable }}{{ .Info.Platform }}{{ else }}Unknown{{ end }}</div>
             </div>
             {{- end }}

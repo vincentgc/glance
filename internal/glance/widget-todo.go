@@ -13,7 +13,7 @@ type todoWidget struct {
 }
 
 func (widget *todoWidget) initialize() error {
-	widget.withTitle("To-do").withError(nil)
+	widget.withTitle("待办项").withError(nil)
 
 	widget.cachedHTML = widget.renderTemplate(widget, todoWidgetTemplate)
 	return nil

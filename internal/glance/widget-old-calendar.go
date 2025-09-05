@@ -15,7 +15,7 @@ type oldCalendarWidget struct {
 }
 
 func (widget *oldCalendarWidget) initialize() error {
-	widget.withTitle("Calendar").withCacheOnTheHour()
+	widget.withTitle("日历").withCacheOnTheHour()
 
 	return nil
 }

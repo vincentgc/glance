@@ -303,10 +303,10 @@ func (ic *ImageCache) CleanExpiredCache() {
 }
 
 // 全局图片缓存实例
-var globalImageCache = NewImageCache("/root/glance/glance-main/cache/images", 24*time.Hour)
+var globalImageCache = NewImageCache("/root/glance/cache/images", 24*time.Hour)
 
 func (widget *videosWidget) initialize() error {
-	widget.withTitle("Videos").withCacheDuration(time.Hour)
+	widget.withTitle("视频").withCacheDuration(time.Hour)
 
 	if widget.Limit <= 0 {
 		widget.Limit = 25

@@ -41,7 +41,7 @@ var searchEngines = map[string]string{
 }
 
 func (widget *searchWidget) initialize() error {
-	widget.withTitle("Search").withError(nil)
+	widget.withTitle("搜索").withError(nil)
 
 	if widget.SearchEngine == "" {
 		widget.SearchEngine = "duckduckgo"

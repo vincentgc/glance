@@ -29,7 +29,7 @@ type releasesWidget struct {
 }
 
 func (widget *releasesWidget) initialize() error {
-	widget.withTitle("Releases").withCacheDuration(2 * time.Hour)
+	widget.withTitle("发布").withCacheDuration(2 * time.Hour)
 
 	if widget.Limit <= 0 {
 		widget.Limit = 10
