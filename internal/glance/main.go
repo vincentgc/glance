@@ -19,6 +19,9 @@ func Main() int {
 		return 1
 	}
 
+	_pwd, _ := os.Getwd()
+	fmt.Println("pwd: "+ _pwd)
+
 	switch options.intent {
 	case cliIntentVersionPrint:
 		fmt.Println(buildVersion)
@@ -200,6 +203,8 @@ func serveUpdateNoticeIfConfigLocationNotMigrated(configPath string) bool {
 	fmt.Println("!!! WARNING !!!")
 	fmt.Println("The default location of glance.yml in the Docker image has changed starting from v0.7.0.")
 	fmt.Println("Please see https://github.com/glanceapp/glance/blob/main/docs/v0.7.0-upgrade.md for more information.")
+	_pwd, _ := os.Getwd()
+	fmt.Printf("pwd: "+ _pwd)
 
 	mux := http.NewServeMux()
 	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.FS(staticFS))))
